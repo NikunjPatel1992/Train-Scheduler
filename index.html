@@ -1,0 +1,109 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta http-equiv="refresh" content="5"> -->
+    <title>Train Schedular</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- css link -->
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+
+    <!-- bootstrap link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+
+    <!--Link to jquary file-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+   
+    <!-- <meta name="google-signin-scope" content="profile email"> -->
+    <!-- <meta name="google-signin-client_id" content="903484084028-libicfdbqegenhh20ad961tji0nc7gfa.apps.googleusercontent.com"> -->
+    <!-- <meta name="google-signin-client_id" content="903484084028-libicfdbqegenhh20ad961tji0nc7gfa.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script> -->
+    <!-- Latest compiled and minified CSS -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+
+</head>
+
+<body>
+    
+    <div class="jumbotron-fluid">
+        <div class="container">
+
+            <div class="jumbotron text-center">
+                <h1 class="display-4" style="font: bold">Train Schedule Time</h1>
+                <p class="lead" style="font: bold">Anytime is Train Time</p>
+                <!-- <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div> -->
+                <!-- <hr class="my-4">
+                <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+                <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a> -->
+            </div>
+
+            <div class="card ">
+                <div class="card-header text-white bg-primary">
+                    Current Train Schedule
+                </div>
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col" class="btn-info text-white" style=" opacity: 0.8">Train Name</th>
+                                <th scope="col" class="btn-info text-white" style=" opacity: 0.8">Destination</th>
+                                <th scope="col" class="btn-info text-white" style=" opacity: 0.8">Frequency (min)</th>
+                                <th scope="col" class="btn-info text-white" style=" opacity: 0.8">Next Arrival</th>
+                                <th scope="col" class="btn-info text-white" style=" opacity: 0.8">Minutes Away</th>
+                                <th scope="col" class="btn-info text-white" style=" opacity: 0.8"></th>
+                                <th scope="col" class="btn-info text-white" style=" opacity: 0.8"></th>
+                            </tr>
+                        </thead>
+
+                        
+                    </table>
+
+                </div>
+            </div>
+           
+            <div class="card addtrain">
+                <div class="card-header text-white bg-primary">
+                    Add Train
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="formGroupExampleInput">Train Name</label>
+                            <input type="text" class="form-control" id="trainname" placeholder="Train Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="formGroupExampleInput2">Destination</label>
+                            <input type="text" class="form-control" id="destination" placeholder="Destination">
+                        </div>
+                        <div class="form-group">
+                            <label for="formGroupExampleInput">First Train Time (HH:mm military time)</label>
+                            <input type="text" class="form-control" id="firsttraintime" placeholder="11:25">
+                        </div>
+                        <div class="form-group">
+                            <label for="formGroupExampleInput2">Frequency (min)</label>
+                            <input type="number" class="form-control" id="frequency" placeholder="1 to 59">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+
+                </div>
+            </div>
+            
+        </div>
+
+    </div>
+
+    <!-- link to momentjs -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <!-- link firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    <!-- javascript link -->
+    <script src="javascript/app.js"></script>
+</body>
+
+</html>
