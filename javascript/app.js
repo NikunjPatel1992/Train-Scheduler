@@ -7,6 +7,12 @@
 //     console.log('Image URL: ' + profile.getImageUrl());
 //     console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
 //   }
+$(".jumbotron-fluid").hide();
+function onSignIn(googleUser){
+    var profile = googleUser.getBasiccProfile();
+    $(".g-signin2").css("display", "block");
+    $(".email").text(profile.getEmail());
+}
 
 var config = {
     apiKey: "AIzaSyDf9t0yxkCKyvoyu5AU_CNLmjxEgzbuuv4",
@@ -174,47 +180,5 @@ function timeUpdater() {
 setInterval(function () {
     window.location.reload();
 }, 60000);
-
-
-function HandleGoogleApiLibrary() {
-	// Load "client" & "auth2" libraries
-	gapi.load('client:auth2',  {
-		callback: function() {
-			// Initialize client & auth libraries
-			gapi.client.init({
-		    	apiKey: 'AIzaSyDEn5FPuaDR2UK1O1sMi7hHicuUTDgMXCU',
-		    	clientId: '171161601808-2bbae3a4u9lb35kv1ac4etdtn1g5bg2o.apps.googleusercontent.com',
-		    	scope: 'https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/plus.me'
-			}).then(
-				function(success) {
-			  		// Libraries are initialized successfully
-		  			// You can now make API calls
-				}, 
-				function(error) {
-					// Error occurred
-					// console.log(error) to find the reason
-			  	}
-			);
-		},
-		onerror: function() {
-			// Failed to load libraries
-		}
-	});
-}
-
-
-
-$(".login").on('click', function() {
-	// API call for Google login
-	gapi.auth2.getAuthInstance().signIn().then(
-		function(success) {
-			// Login API call is successful	
-		},
-		function(error) {
-			// Error occurred
-			// console.log(error) to find the reason
-		}
-	);
-});
 
 
