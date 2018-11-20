@@ -18,7 +18,9 @@
     <!--Link to jquary file-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-   
+    <script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};HandleGoogleApiLibrary()"
+        onreadystatechange="if (this.readyState === 'complete') this.onload()"></script>
+
     <!-- <meta name="google-signin-scope" content="profile email"> -->
     <!-- <meta name="google-signin-client_id" content="903484084028-libicfdbqegenhh20ad961tji0nc7gfa.apps.googleusercontent.com"> -->
     <!-- <meta name="google-signin-client_id" content="903484084028-libicfdbqegenhh20ad961tji0nc7gfa.apps.googleusercontent.com">
@@ -29,13 +31,14 @@
 </head>
 
 <body>
-    
+
     <div class="jumbotron-fluid">
         <div class="container">
 
             <div class="jumbotron text-center">
                 <h1 class="display-4" style="font: bold">Train Schedule Time</h1>
                 <p class="lead" style="font: bold">Anytime is Train Time</p>
+                <button class="login">Login</button>
                 <!-- <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div> -->
                 <!-- <hr class="my-4">
                 <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
@@ -60,12 +63,12 @@
                             </tr>
                         </thead>
 
-                        
+
                     </table>
 
                 </div>
             </div>
-           
+
             <div class="card addtrain">
                 <div class="card-header text-white bg-primary">
                     Add Train
@@ -93,7 +96,7 @@
 
                 </div>
             </div>
-            
+
         </div>
 
     </div>
